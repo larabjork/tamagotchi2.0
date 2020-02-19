@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Start from './components/Start';
 import GamePlay from './components/GamePlay';
 import End from './components/End';
-// import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 // import Moment from 'moment';
 
 class App extends React.Component {
@@ -15,6 +15,8 @@ class App extends React.Component {
       hunger: 10,
       sleep: 10,
       play: 10,
+      name: "",
+      id: null
       // endgame: false
       // currentEmotion: null
     };
@@ -22,6 +24,7 @@ class App extends React.Component {
     // this.handleSleep = this.handleSleep.bind(this);
     // this.handlePLay = this.handlePLay.bind(this);
     // this.handleCurrentEmotion = this.handleCurrentEmotion.bind(this);
+    this.handleNewName = this.handleNewName.bind(this);
   }
 
   handleHunger(num){
@@ -37,14 +40,19 @@ class App extends React.Component {
     this.setState({hunger: updatedPlay});
   }
 
+  handleNewName(object){
+    this.setState({name: object.name, id: object.id});
+  }
+
   render(){
     return (
       <div>
         <Header/>
-        <Start/>
-        <GamePlay/>
-        <End/>
-        
+        <Switch>
+          <Route exact path='/' render={()=><Start onNewNameCreation={this.handleNewName}/>} />
+          <Route path='/gameplay' render={()=><GamePlay name={this.state.name} />} />
+          <Route path='/end' component={End} />
+        </Switch>
 
 
       </div>
