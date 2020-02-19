@@ -1,38 +1,57 @@
-.App {
+#game-play, #end {
+  display: none;
+}
+
+#name-display {
+  display: none;
+}
+
+body {
+  background-color: #6A4C93;
+}
+
+h1 {
+  /* font-family: 'Alata', sans-serif; */
+  font-family: 'Lobster', cursive;
+  color: #FFCA3A;
+  font-size: 56px;
+}
+
+label, h4 {
+  font-family: 'Alata', sans-serif;
+  color: white;
+  font-size: 36px;
+}
+
+button {
+  font-family: 'Alata', sans-serif;
+  background-color: #FF595E;
+  color: white;
+  border-radius: 2.5px;
+  border-color: #FF595E;
+  font-size: 28px;
+}
+
+#counters {
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 28px;
+}
+
+#hunger, #fun, #energy {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#x, #treme {
+  font-family: 'Permanent Marker', cursive;
+  color: #FF595E;
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#x {
+  font-size: 100px;
+  vertical-align: sub;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#treme {
+  font-size: 56px;
 }
