@@ -50,7 +50,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><Start onNewNameCreation={this.handleNewName}/>} />
-          <Route path='/gameplay' render={()=><GamePlay name={this.state.name} />} />
+          <Route path='/gameplay' render={()=><GamePlay name={this.state.name} hunger={this.state.hunger} sleep={this.state.sleep} play={this.state.play} />} />
           <Route path='/end' component={End} />
         </Switch>
 

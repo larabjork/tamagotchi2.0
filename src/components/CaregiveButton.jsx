@@ -1,14 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 
-function CaregiveButton(){
+function CaregiveButton(props){
+
+
+
+
+
   return (
     <div>
-    <p>CaregiveButton</p>
+
     </div>
 
   );
 }
+
+CaregiveButton.propTypes = {
+  hunger: PropTypes.number,
+  sleep: PropTypes.number,
+  play: PropTypes.number
+
+};
 
 export default CaregiveButton;
