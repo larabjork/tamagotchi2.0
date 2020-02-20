@@ -4,7 +4,7 @@ import CaregiveButton from './CaregiveButton';
 import PropTypes from 'prop-types';
 
 function handleAction(action) {
-  console.log(g);
+  console.log(action);
 }
 
 const Caregiver = props => <button onClick={() => handleAction(props.action)}>{props.display}</button>;
