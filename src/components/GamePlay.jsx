@@ -3,7 +3,11 @@ import Playpen from './Playpen';
 import CaregiveButton from './CaregiveButton';
 import PropTypes from 'prop-types';
 
-const Caregiver = props => <div>{props.action}</div>;
+function handleAction(action) {
+  console.log(g);
+}
+
+const Caregiver = props => <button onClick={() => handleAction(props.action)}>{props.display}</button>;
 
 class GamePlay extends React.Component {
 
@@ -14,13 +18,13 @@ class GamePlay extends React.Component {
     <h2>{this.props.name} is ready to play!</h2>
     <p>GamePlay</p>
     <p>Hunger: {this.props.hunger}</p>
-      <Caregiver action='Feed me!'/>
+      <Caregiver display='Feed me!' action='hunger'/>
     <br/>
     <p>Sleep: {this.props.sleep}</p>
-      <Caregiver action= 'Bedtime!'/>
+      <Caregiver display= 'Bedtime!' action='sleep'/>
     <br/>
     <p>Play: {this.props.play}</p>
-      <Caregiver action= "Let's play!"/>
+      <Caregiver display= "Let's play!" action='play'/>
 
 
     <Playpen />
